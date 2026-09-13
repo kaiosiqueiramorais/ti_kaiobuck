@@ -1,128 +1,62 @@
-# ti_kaiobuck
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radar da Vida Escolar</title>
-<style>
-  body {
-    background-color: #e2dddd;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background-color: #104206;
-    padding: 20px;
-    text-align: center;
-  }
-  header h1 { 
-    color: #ffffff; 
-    margin: 0;
-  }
-  main { 
-    padding: 20px; 
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .cartao {
-    background-color: #f1efef;
-    padding: 15px;
-    border-left: 5px solid #104206;
-    margin-bottom: 15px;
-    border-radius: 10px;
-  }
-  .cartao h2 {
-    color: #104206;
-    margin-top: 0;
-  }
-  .contagem {
-    font-weight: bold;
-    color: #104206;
-    font-size: 20px;
-  }
-  .apoiar {
-    background-color: #104206;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 544px;
-    cursor: pointer;
-  }
-  .apoiar:hover { 
-    background-color: #0d2b21; 
-  }
-  .remover {
-    background-color: #868685;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 100px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  .remover:hover { 
-    background-color: #e75e3c; 
-  }
-</style>
-</head>
-<body>
+# Tecnologia e Inovação | 1J | 3º trimestre
 
-<header>
-  <h1>Radar da Vida Escolar</h1>
-</header>
+Repositório da disciplina. Tudo o que você produzir no trimestre fica aqui.
 
-<main>
-  <div class="cartao">
-    <h2>Bebedouro do corredor</h2>
-    <p>O bebedouro vaza desde março e forma poça no piso.</p>
-    <p>Apoios: <span class="contagem">0</span></p>
-    <button class="apoiar">Apoiar</button>
-    <button class="remover">Remover apoio</button>
-  </div>
+## Como está organizado
 
-  <div class="cartao">
-    <h2>Fila da cantina</h2>
-    <p>A fila toma quase todo o intervalo dos alunos.</p>
-    <p>Apoios: <span class="contagem">0</span></p>
-    <button class="apoiar">Apoiar</button>
-    <button class="remover">Remover apoio</button>
-  </div>
+```
+index.html        o Radar da Vida Escolar. Um arquivo só, o mesmo o trimestre inteiro
+exercicios/       as respostas dos exercícios, um arquivo por aula
+trabalho/         os entregáveis do dossiê, numerados
+img/              as imagens que você usar na página
+```
 
-  <div class="cartao">
-    <h2>Iluminação da quadra</h2>
-    <p>Metade das lâmpadas está queimada há dois meses.</p>
-    <p>Apoios: <span class="contagem">0</span></p>
-    <button class="apoiar">Apoiar</button>
-    <button class="remover">Remover apoio</button>
-  </div>
-</main>
+## O index.html é o seu projeto
 
-<script>
-  
-  document.querySelectorAll('.apoiar').forEach(function(botao) {
-    botao.addEventListener('click', function() {
-      let cartao = botao.parentElement;
-      let display = cartao.querySelector('.contagem');
-      let valor = Number(display.textContent);
-      display.textContent = valor + 1;
-    });
-  });
+Você não copia, não duplica e não cria pasta nova a cada aula. Abre o mesmo arquivo e melhora um pedaço dele.
 
- 
-  document.querySelectorAll('.remover').forEach(function(botao) {
-    botao.addEventListener('click', function() {
-      let cartao = botao.parentElement;
-      let display = cartao.querySelector('.contagem');
-      let valor = Number(display.textContent);
+É essa página que você vai abrir na defesa no fim do trimestre. O caminho que ela fez até lá fica guardado nos seus commits.
 
-      if (valor > 0) {
-        display.textContent = valor - 1;
-      }
-    });
-  });
-</script>
+## Os exercícios
 
-</body>
-</html>
+Uma aula, um arquivo: `exercicios/aula01.js`, `exercicios/aula02.js`, e assim por diante.
+
+Cada questão abre com um marcador. Sem ele eu não acho a sua resposta e não corrijo:
+
+```js
+// ex1
+(sua resposta aqui)
+
+// ex2
+(sua resposta aqui)
+```
+
+Quando o exercício mandar mexer no Radar, a resposta é a própria página: você altera o `index.html` e no arquivo de exercícios escreve só o que fez.
+
+Exercício vale por entrega, não por acerto. Você não perde nota por errar, perde por não fazer.
+
+## Nome de arquivo
+
+Tudo minúsculo, sem acento, sem espaço, com o número de dois dígitos. É `aula03.js`, não `Aula3.js` nem `aula 03 final v2.js`. A página chama `index.html`, nunca `Index.html` nem `pagina.html`.
+
+Isso não é frescura de professor. É assim que o computador acha arquivo, pelo nome exato. Nome com maiúscula ou espaço funciona na sua máquina e quebra na minha, e você vai jurar que estava certo, porque estava, aí.
+
+## Este arquivo aqui não é a sua página
+
+Todo repositório nasce com um README, e o GitHub mostra o conteúdo dele como texto na entrada.
+
+Se você colar HTML aqui dentro, nada dá erro: o arquivo salva, o commit sobe, aparece coisa na tela. Só que o navegador nunca vai abrir isso como página, porque `.md` não é `.html`. A sua página é o `index.html`.
+
+## Prazo
+
+O laboratório fica aberto por duas semanas. Atraso é aceito por mais uma semana, valendo no máximo 70%. Depois disso, fecha.
+
+Tentativas ilimitadas dentro do prazo. Envie cedo e envie errado: melhor descobrir na segunda-feira que no dia da entrega.
+
+## Na defesa
+
+Eu escolho cinco linhas do seu arquivo e faço duas perguntas, sempre as mesmas: por que essa linha existe, e o que acontece se eu mudar esse valor.
+
+Pode usar livro, internet, colega e inteligência artificial. O que não pode é entregar o que você não sabe explicar.
+
+Professor Diego
